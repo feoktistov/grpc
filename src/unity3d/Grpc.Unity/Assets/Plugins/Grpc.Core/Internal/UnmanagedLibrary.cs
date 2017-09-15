@@ -165,14 +165,9 @@ namespace Grpc.Core.Internal
                     return path;
                 }
             }
-            UnityEngine.Debug.LogError (String.Format("Error loading native library. Not found in any of the possible locations: {0}", 
-              string.Join(",", libraryPathAlternatives)));
-            return null;
-            /*
             throw new FileNotFoundException(
                 String.Format("Error loading native library. Not found in any of the possible locations: {0}", 
                     string.Join(",", libraryPathAlternatives)));
-                    */
         }
 
         private static class Windows

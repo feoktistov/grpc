@@ -37,8 +37,11 @@ namespace Grpc.Core.Internal
 
         private NativeExtension()
         {
+            #if UNITY_5_4_OR_NEWER
+            this.nativeMethods = new NativeMethods();
+            #else
             this.nativeMethods = new NativeMethods(Load());
-            
+            #endif
             // Redirect the the native logs as the very first thing after loading the native extension
             // to make sure we don't lose any logs.
             NativeLogRedirector.Redirect(this.nativeMethods);
