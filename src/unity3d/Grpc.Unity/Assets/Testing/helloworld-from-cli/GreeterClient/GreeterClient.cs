@@ -19,15 +19,16 @@ using Helloworld;
 
 class GreeterClient
 {
-  public static void Start ()
-  {
-    Channel channel = new Channel ("127.0.0.1:50051", ChannelCredentials.Insecure);
+    public static HelloReply Start()
+    {
+        Channel channel = new Channel("127.0.0.1:50051", ChannelCredentials.Insecure);
 
-    var client = new Greeter.GreeterClient (channel);
-    var user = "you";
+        var client = new Greeter.GreeterClient(channel);
+        var user = "you";
 
-    var reply = client.SayHello (new HelloRequest { Name = user });
-    UnityEngine.Debug.Log ("Greeting: " + reply.Message);
-    channel.ShutdownAsync ().Wait ();
-  }
+        var reply = client.SayHello(new HelloRequest { Name = user });
+        UnityEngine.Debug.Log("Greeting: " + reply.Message);
+        channel.ShutdownAsync().Wait();
+        return reply;
+    }
 }

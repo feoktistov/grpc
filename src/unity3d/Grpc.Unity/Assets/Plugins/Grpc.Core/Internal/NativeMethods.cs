@@ -552,7 +552,7 @@ namespace Grpc.Core.Internal
 
 
         #if UNITY_EDITOR    
-        private const string pluginName = "libgrpc_csharp_ext";    
+        private const string pluginName = "grpc_csharp_ext";    
         #elif UNITY_IOS || UNITY_TVOS || UNITY_WEBGL    
         public const string pluginName = "__Internal";    
         #else   

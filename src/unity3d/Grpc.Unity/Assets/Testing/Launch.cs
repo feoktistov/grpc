@@ -9,17 +9,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Launch : MonoBehaviour
 {
-  void Start ()
-  {
-    GreeterServer.Start ();
-  }
+    [SerializeField] Text Message;
+
+    void Start()
+    {
+        GreeterServer.Start();
+    }
 
 
-  public void OnStartClient()
-  {
-    GreeterClient.Start ();
-  }
+    public void OnStartClient()
+    {
+        Message.text = GreeterClient.Start().Message;
+    }
 }
