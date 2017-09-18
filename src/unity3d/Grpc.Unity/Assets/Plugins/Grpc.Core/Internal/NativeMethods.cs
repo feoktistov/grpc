@@ -727,13 +727,8 @@ namespace Grpc.Core.Internal
         [DllImport(pluginName)]
         internal static extern void grpcsharp_channel_destroy(IntPtr channel);
 
-
         [DllImport(pluginName)]
         internal static extern int grpcsharp_sizeof_grpc_event();
-
-
-        [DllImport(pluginName)]
-        internal static extern CompletionQueueSafeHandle grpcsharp_completion_queue_create();
 
         [DllImport(pluginName)]
         internal static extern void grpcsharp_completion_queue_shutdown(CompletionQueueSafeHandle cq);
@@ -747,10 +742,8 @@ namespace Grpc.Core.Internal
         [DllImport(pluginName)]
         internal static extern void grpcsharp_completion_queue_destroy(IntPtr cq);
 
-
         [DllImport(pluginName)]
         internal static extern void gprsharp_free(IntPtr ptr);
-
 
         [DllImport(pluginName)]
         internal static extern MetadataArraySafeHandle grpcsharp_metadata_array_create(UIntPtr capacity);

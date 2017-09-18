@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		258869201F6FF2BB00A7DD03 /* grpc_csharp_ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 2588691F1F6FF2BB00A7DD03 /* grpc_csharp_ext.m */; };
-		258869211F6FF2BB00A7DD03 /* grpc_csharp_ext.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2588691E1F6FF2BB00A7DD03 /* grpc_csharp_ext.h */; };
+		258869281F6FF2EB00A7DD03 /* grpc_csharp_ext.c in Sources */ = {isa = PBXBuildFile; fileRef = 258869271F6FF2EB00A7DD03 /* grpc_csharp_ext.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -18,7 +17,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				258869211F6FF2BB00A7DD03 /* grpc_csharp_ext.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -26,8 +24,7 @@
 
 /* Begin PBXFileReference section */
 		2588691B1F6FF2BB00A7DD03 /* libgrpc_csharp_ext.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libgrpc_csharp_ext.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		2588691E1F6FF2BB00A7DD03 /* grpc_csharp_ext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = grpc_csharp_ext.h; sourceTree = "<group>"; };
-		2588691F1F6FF2BB00A7DD03 /* grpc_csharp_ext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = grpc_csharp_ext.m; sourceTree = "<group>"; };
+		258869271F6FF2EB00A7DD03 /* grpc_csharp_ext.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = grpc_csharp_ext.c; path = ../../../../csharp/ext/grpc_csharp_ext.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +57,7 @@
 		2588691D1F6FF2BB00A7DD03 /* grpc_csharp_ext */ = {
 			isa = PBXGroup;
 			children = (
-				2588691E1F6FF2BB00A7DD03 /* grpc_csharp_ext.h */,
-				2588691F1F6FF2BB00A7DD03 /* grpc_csharp_ext.m */,
+				258869271F6FF2EB00A7DD03 /* grpc_csharp_ext.c */,
 			);
 			path = grpc_csharp_ext;
 			sourceTree = "<group>";
@@ -123,7 +119,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				258869201F6FF2BB00A7DD03 /* grpc_csharp_ext.m in Sources */,
+				258869281F6FF2EB00A7DD03 /* grpc_csharp_ext.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +167,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../../",
+					"$(SRCROOT)/../../../../include",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -213,6 +213,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../../",
+					"$(SRCROOT)/../../../../include",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
@@ -257,6 +261,7 @@
 				258869261F6FF2BB00A7DD03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
