@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		258869281F6FF2EB00A7DD03 /* grpc_csharp_ext.c in Sources */ = {isa = PBXBuildFile; fileRef = 258869271F6FF2EB00A7DD03 /* grpc_csharp_ext.c */; };
+		D33A0C74B4469711A3E599D4 /* libPods-grpc_csharp_ext.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD3C46685CF1E447FD2B80F /* libPods-grpc_csharp_ext.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,9 @@
 /* Begin PBXFileReference section */
 		2588691B1F6FF2BB00A7DD03 /* libgrpc_csharp_ext.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libgrpc_csharp_ext.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		258869271F6FF2EB00A7DD03 /* grpc_csharp_ext.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = grpc_csharp_ext.c; path = ../../../../csharp/ext/grpc_csharp_ext.c; sourceTree = "<group>"; };
+		8AD3C46685CF1E447FD2B80F /* libPods-grpc_csharp_ext.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-grpc_csharp_ext.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F39835A05D1C395CCF9E27A /* Pods-grpc_csharp_ext.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-grpc_csharp_ext.release.xcconfig"; path = "Pods/Target Support Files/Pods-grpc_csharp_ext/Pods-grpc_csharp_ext.release.xcconfig"; sourceTree = "<group>"; };
+		9504C07DB20A73AE98163289 /* Pods-grpc_csharp_ext.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-grpc_csharp_ext.debug.xcconfig"; path = "Pods/Target Support Files/Pods-grpc_csharp_ext/Pods-grpc_csharp_ext.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D33A0C74B4469711A3E599D4 /* libPods-grpc_csharp_ext.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +48,8 @@
 			children = (
 				2588691D1F6FF2BB00A7DD03 /* grpc_csharp_ext */,
 				2588691C1F6FF2BB00A7DD03 /* Products */,
+				72F1836F6BF16E1082E1AF05 /* Pods */,
+				B321A1AF260D79567B934B7D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +69,23 @@
 			path = grpc_csharp_ext;
 			sourceTree = "<group>";
 		};
+		72F1836F6BF16E1082E1AF05 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9504C07DB20A73AE98163289 /* Pods-grpc_csharp_ext.debug.xcconfig */,
+				8F39835A05D1C395CCF9E27A /* Pods-grpc_csharp_ext.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B321A1AF260D79567B934B7D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8AD3C46685CF1E447FD2B80F /* libPods-grpc_csharp_ext.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -69,9 +93,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 258869241F6FF2BB00A7DD03 /* Build configuration list for PBXNativeTarget "grpc_csharp_ext" */;
 			buildPhases = (
+				B653C9883278E6D352686D64 /* [CP] Check Pods Manifest.lock */,
 				258869171F6FF2BB00A7DD03 /* Sources */,
 				258869181F6FF2BB00A7DD03 /* Frameworks */,
 				258869191F6FF2BB00A7DD03 /* CopyFiles */,
+				0FFFCE4C08DFC9D8EF154FB0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -113,6 +139,45 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0FFFCE4C08DFC9D8EF154FB0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-grpc_csharp_ext/Pods-grpc_csharp_ext-resources.sh",
+				$PODS_CONFIGURATION_BUILD_DIR/gRPC/gRPCCertificates.bundle,
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-grpc_csharp_ext/Pods-grpc_csharp_ext-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B653C9883278E6D352686D64 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-grpc_csharp_ext-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		258869171F6FF2BB00A7DD03 /* Sources */ = {
@@ -226,7 +291,9 @@
 		};
 		258869251F6FF2BB00A7DD03 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9504C07DB20A73AE98163289 /* Pods-grpc_csharp_ext.debug.xcconfig */;
 			buildSettings = {
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -235,6 +302,7 @@
 		};
 		258869261F6FF2BB00A7DD03 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F39835A05D1C395CCF9E27A /* Pods-grpc_csharp_ext.release.xcconfig */;
 			buildSettings = {
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
